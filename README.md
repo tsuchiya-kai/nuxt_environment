@@ -20,7 +20,7 @@ $ yarn start
 $ yarn generate
 
 # commit 
-$ yarn run commit
+$ yarn commit
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
