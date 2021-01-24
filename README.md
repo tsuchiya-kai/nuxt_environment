@@ -1,26 +1,61 @@
 # enviroment-sample
 
-## Memo
-nuxt.jsを使用したproductの環境構築を事前にある程度行う事が目的
+nuxt.js を使用した product の環境構築を事前にある程度行う事が目的
 
-## Build Setup
+## Installation
+
+- clone
 
 ```bash
-# install dependencies
+$ git clone git@github.com:tsuchiya-kai/nuxt_environment.git
+```
+
+## How to
+
+- install
+
+```bash
 $ yarn install
+```
 
-# serve with hot reload at localhost:3000
+- ローカル開発
+
+```bash
 $ yarn dev
+```
 
-# build for production and launch server
+- 本番用 buils とサーバーを起動
+
+```bash
 $ yarn build
 $ yarn start
+```
 
-# generate static project
+- 静的ファイル作成（production build）
+
+```bash
 $ yarn generate
+```
 
-# commit 
+- commit
+
+```bash
 $ yarn commit
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+- formatting
+
+```bash
+## js
+$ yarn lint:js:fix
+
+## scss
+$ yarn lint:style:fix
+
+## jsとcss両方
+$ yarn lint:fix
+```
+
+## Contribution
+
+- プロジェクトにコミットするためにまずディレクトリ構成を確認しどこに何のファイルがありどのファイルを更新すればいいのか確認しましょう
