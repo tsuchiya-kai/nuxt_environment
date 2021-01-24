@@ -95,41 +95,23 @@ $ yarn lint:fix
 ├── assets
 │   ├── README.md
 │   └── scss
-│       ├── app.scss
+│       ├── app.scss //entory point
 │       ├── components
-│       │   └── sample.scss
 │       ├── elements
 │       ├── generic
-│       │   ├── _border-box.scss
-│       │   ├── _reset.scss
-│       │   ├── _root-font-size.scss
-│       │   └── _typography.scss
 │       ├── objects
 │       ├── settings
-│       │   ├── _colors.scss
-│       │   └── _fonts.scss
 │       ├── tools
-│       │   └── _mixins.scss
 │       └── utilities
-│           └── _main.scss
 ├── components
-│   ├── Logo.vue
-│   └── README.md
 ├── layouts
-│   ├── README.md
 │   └── default.vue
 ├── middleware
-│   └── README.md
 ├── pages
-│   ├── README.md
 │   └── index.vue
 ├── plugins
-│   └── README.md
 ├── static
-│   ├── README.md
-│   └── favicon.ico
 ├── store
-│   └── README.md
 ├── test
 │   └── Logo.spec.js
 ├── .vscode
