@@ -8,9 +8,9 @@
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:js:fix": "eslint --ext \".js,.vue\" --ignore-path .gitignore . --fix",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
-    "lint:fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
     "test": "jest",
     "commit": "git-cz"
   },
