@@ -1,9 +1,9 @@
 module.exports = {
   extends: [
     'stylelint-config-standard', // 最初からあった
-    'stylelint-config-prettier', // 最初からあった
     'stylelint-config-recess-order', // プロパティの順番
     'stylelint-rscss/config', // RSCSS用
+    'stylelint-config-prettier', // 最初からあった
   ],
   // add your custom config here
   // https://stylelint.io/user-guide/configuration

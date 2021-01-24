@@ -12,6 +12,7 @@
     "lint:style": "stylelint \"**/*.{vue,scss,css}\" --ignore-path .gitignore",
     "lint:style:fix": "stylelint \"**/*.{vue,scss,css}\" --ignore-path .gitignore --fix",
     "lint": "yarn lint:js && yarn lint:style",
+    "lint:fix": "yarn lint:js:fix && yarn lint:style:fix",
     "test": "jest",
     "commit": "git-cz"
   },

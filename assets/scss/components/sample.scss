@@ -2,9 +2,10 @@
 * NOTE: 環境構築時のスタイルやlintが効いているか確認用
 **/
 * {
-  font-size:10px;
-  color:$red !important;
+  font-size: 10px;
+  color: $red !important;
+
   > p {
-    color:$red !important;
+    color: $red !important;
   }
 }
