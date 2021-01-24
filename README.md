@@ -1,4 +1,4 @@
-# nittetsu-sample
+# enviroment-sample
 
 ## Memo
 nuxt.jsを使用したproductの環境構築を事前にある程度行う事が目的
