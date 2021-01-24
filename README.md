@@ -60,8 +60,38 @@ $ yarn lint:fix
 
 - プロジェクトにコミットするためにまずディレクトリ構成を確認しどこに何のファイルがありどのファイルを更新すればいいのか確認しましょう
  ```
- .
-├── README.md
+.
+├── .nuxt
+│   ├── App.js
+│   ├── client.js
+│   ├── components
+│   │   ├── index.js
+│   │   ├── nuxt-build-indicator.vue
+│   │   ├── nuxt-child.js
+│   │   ├── nuxt-error.vue
+│   │   ├── nuxt-link.client.js
+│   │   ├── nuxt-link.server.js
+│   │   ├── nuxt-loading.vue
+│   │   ├── nuxt.js
+│   │   └── plugin.js
+│   ├── empty.js
+│   ├── index.js
+│   ├── jsonp.js
+│   ├── loading.html
+│   ├── middleware.js
+│   ├── mixins
+│   │   ├── fetch.client.js
+│   │   └── fetch.server.js
+│   ├── router.js
+│   ├── router.scrollBehavior.js
+│   ├── routes.json
+│   ├── server.js
+│   ├── utils.js
+│   ├── vetur
+│   │   └── tags.json
+│   └── views
+│       ├── app.template.html
+│       └── error.html
 ├── assets
 │   ├── README.md
 │   └── scss
@@ -82,19 +112,14 @@ $ yarn lint:fix
 │       │   └── _mixins.scss
 │       └── utilities
 │           └── _main.scss
-├── commitlint.config.js
 ├── components
 │   ├── Logo.vue
 │   └── README.md
-├── jest.config.js
-├── jsconfig.json
 ├── layouts
 │   ├── README.md
 │   └── default.vue
 ├── middleware
 │   └── README.md
-├── nuxt.config.js
-├── package.json
 ├── pages
 │   ├── README.md
 │   └── index.vue
@@ -105,9 +130,23 @@ $ yarn lint:fix
 │   └── favicon.ico
 ├── store
 │   └── README.md
-├── stylelint.config.js
 ├── test
 │   └── Logo.spec.js
+├── .vscode
+│   └── settings.json
+├── .babelrc
+├── .czrc
+├── .editorconfig
+├── .eslintrc.js
+├── .gitignore
+├── .prettierrc
+├── commitlint.config.js
+├── stylelint.config.js
+├── jest.config.js
+├── jsconfig.json
+├── nuxt.config.js
 ├── tsconfig.json
-└── yarn.lock
+├── package.json
+├── yarn.lock
+└── README.md
 ```
