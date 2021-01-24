@@ -59,3 +59,55 @@ $ yarn lint:fix
 ## Contribution
 
 - プロジェクトにコミットするためにまずディレクトリ構成を確認しどこに何のファイルがありどのファイルを更新すればいいのか確認しましょう
+ ```
+ .
+├── README.md
+├── assets
+│   ├── README.md
+│   └── scss
+│       ├── app.scss
+│       ├── components
+│       │   └── sample.scss
+│       ├── elements
+│       ├── generic
+│       │   ├── _border-box.scss
+│       │   ├── _reset.scss
+│       │   ├── _root-font-size.scss
+│       │   └── _typography.scss
+│       ├── objects
+│       ├── settings
+│       │   ├── _colors.scss
+│       │   └── _fonts.scss
+│       ├── tools
+│       │   └── _mixins.scss
+│       └── utilities
+│           └── _main.scss
+├── commitlint.config.js
+├── components
+│   ├── Logo.vue
+│   └── README.md
+├── jest.config.js
+├── jsconfig.json
+├── layouts
+│   ├── README.md
+│   └── default.vue
+├── middleware
+│   └── README.md
+├── nuxt.config.js
+├── package.json
+├── pages
+│   ├── README.md
+│   └── index.vue
+├── plugins
+│   └── README.md
+├── static
+│   ├── README.md
+│   └── favicon.ico
+├── store
+│   └── README.md
+├── stylelint.config.js
+├── test
+│   └── Logo.spec.js
+├── tsconfig.json
+└── yarn.lock
+```
