@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nittetsu-sample',
+    title: 'enviroment-sample',
     htmlAttrs: {
       lang: 'en',
     },

@@ -1,6 +1,5 @@
 // NOTE: 下記8つは余白用
 @for $i from 1 through 20 {
-    // TODO: linterの設定をしたらこれをforを使用しているutilities全てにつける
   /* stylelint-disable-next-line */
   ._ml-#{$i} {
     margin-left: #{$i}rem !important;
@@ -8,42 +7,49 @@
 }
 
 @for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
   ._mr-#{$i} {
     margin-right: #{$i}rem !important;
   }
 }
 
 @for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
   ._mt-#{$i} {
     margin-top: #{$i}rem !important;
   }
 }
 
 @for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
   ._mb-#{$i} {
     margin-bottom: #{$i}rem !important;
   }
 }
 
 @for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
   ._pl-#{$i} {
     padding-left: #{$i}rem !important;
   }
 }
 
 @for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
   ._pr-#{$i} {
     padding-right: #{$i}rem !important;
   }
 }
 
 @for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
   ._pt-#{$i} {
     padding-top: #{$i}rem !important;
   }
 }
 
 @for $i from 1 through 20 {
+  /* stylelint-disable-next-line */
   ._pb-#{$i} {
     padding-bottom: #{$i}rem !important;
   }
