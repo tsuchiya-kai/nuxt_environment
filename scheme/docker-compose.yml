@@ -1,10 +1,18 @@
 version: '3'
 services:
   # https://github.com/openapitools/openapi-generator-cli
+  # 定義したスキーマから実際の実装ファイルを生成するものなのでこの記述は必要ないかも？
+  # モックサーバー用に必要であればとっておく必要がある
   openapi-generator:
     image: openapitools/openapi-generator-cli
     volumes:
       - ./:/app
+    # openapi-generator-cliのコマンドを実行している
+    # 意味は、
+    # generate -g 生成するコードの種類を指定→typescript-axios
+    # -i /app/openapi.yml OpenAPI Specificationのyamlファイルを指定
+    # -o /app/src/types/typescript-axios 出力する場所を指定
+    # typescript-axiosの部分を変えれば生成する言語を変更することができる
     command: generate -g typescript-axios -i /app/openapi.yml -o /app/src/types/typescript-axios
   # https://swagger.io/tools/swagger-ui/
   swagger-ui:
