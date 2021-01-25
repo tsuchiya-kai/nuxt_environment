@@ -1,0 +1,26 @@
+version: '3'
+services:
+  # https://github.com/openapitools/openapi-generator-cli
+  openapi-generator:
+    image: openapitools/openapi-generator-cli
+    volumes:
+      - ./:/app
+    command: generate -g typescript-axios -i /app/openapi.yml -o /app/src/types/typescript-axios
+  # https://swagger.io/tools/swagger-ui/
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    volumes:
+      - ./openapi.yml:/app/openapi.yml
+    environment:
+      SWAGGER_JSON: /app/openapi.yml
+    ports:
+      - 8080:8080
+  # https://stoplight.io/p/docs/gh/stoplightio/prism
+  mock-api:
+    image: stoplight/prism
+    volumes:
+      - ./openapi.yml:/app/openapi.yml
+    ports:
+      - 4010:4010
+    # -dをつけることでランダムなデータが返ってくる
+    command: mock -h 0.0.0.0 -d /app/openapi.yml
