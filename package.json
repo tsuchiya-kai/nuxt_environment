@@ -14,7 +14,8 @@
     "lint": "yarn lint:js && yarn lint:style",
     "lint:fix": "yarn lint:js:fix && yarn lint:style:fix",
     "test": "jest",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "branch:delete": "git branch --merged|egrep -v '\\*|develop|staging|main'|xargs git branch -d"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
