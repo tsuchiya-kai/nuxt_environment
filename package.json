@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.1",
+    "@nuxtjs/composition-api": "^0.24.4",
     "commitizen": "^4.2.3",
     "core-js": "^3.8.2",
     "cz-conventional-changelog": "^3.3.0",
