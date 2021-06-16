@@ -1,16 +1,19 @@
-# enviroment-sample
+# nuxt_enviroment
+nuxt 案件にすぐに対応できるよう環境構築を事前に行っておく
 
-nuxt.js を使用した product の環境構築を事前にある程度行う事が目的
+## environment
 
-## Installation
+- node ^14.16.0
+- Nuxt ^2.15.2
+
+## How to
 
 - clone
 
 ```bash
-$ git clone git@github.com:tsuchiya-kai/nuxt_environment.git
+git clone git@github.com:arsaga-partners/sumune-client.git
+cd sumune-client
 ```
-
-## How to
 
 - install
 
@@ -24,7 +27,7 @@ $ yarn install
 $ yarn dev
 ```
 
-- 本番用 buils とサーバーを起動
+- 本番用 build とサーバーを起動
 
 ```bash
 $ yarn build
@@ -37,10 +40,16 @@ $ yarn start
 $ yarn generate
 ```
 
-- commit
+- commit（推奨）
 
 ```bash
 $ yarn commit
+```
+
+- マージ済みのローカルブランチを削除
+
+```bash
+$ yarn branch:delete
 ```
 
 - formatting
@@ -54,81 +63,4 @@ $ yarn lint:style:fix
 
 ## jsとcss両方
 $ yarn lint:fix
-```
-
-## Contribution
-
-- プロジェクトにコミットするためにまずディレクトリ構成を確認しどこに何のファイルがありどのファイルを更新すればいいのか確認しましょう
- ```
-.
-├── .nuxt
-│   ├── App.js
-│   ├── client.js
-│   ├── components
-│   │   ├── index.js
-│   │   ├── nuxt-build-indicator.vue
-│   │   ├── nuxt-child.js
-│   │   ├── nuxt-error.vue
-│   │   ├── nuxt-link.client.js
-│   │   ├── nuxt-link.server.js
-│   │   ├── nuxt-loading.vue
-│   │   ├── nuxt.js
-│   │   └── plugin.js
-│   ├── empty.js
-│   ├── index.js
-│   ├── jsonp.js
-│   ├── loading.html
-│   ├── middleware.js
-│   ├── mixins
-│   │   ├── fetch.client.js
-│   │   └── fetch.server.js
-│   ├── router.js
-│   ├── router.scrollBehavior.js
-│   ├── routes.json
-│   ├── server.js
-│   ├── utils.js
-│   ├── vetur
-│   │   └── tags.json
-│   └── views
-│       ├── app.template.html
-│       └── error.html
-├── assets
-│   ├── README.md
-│   └── scss
-│       ├── app.scss //entory point
-│       ├── components
-│       ├── elements
-│       ├── generic
-│       ├── objects
-│       ├── settings
-│       ├── tools
-│       └── utilities
-├── components
-├── layouts
-│   └── default.vue
-├── middleware
-├── pages
-│   └── index.vue
-├── plugins
-├── static
-├── store
-├── test
-│   └── Logo.spec.js
-├── .vscode
-│   └── settings.json
-├── .babelrc
-├── .czrc
-├── .editorconfig
-├── .eslintrc.js
-├── .gitignore
-├── .prettierrc
-├── commitlint.config.js
-├── stylelint.config.js
-├── jest.config.js
-├── jsconfig.json
-├── nuxt.config.js
-├── tsconfig.json
-├── package.json
-├── yarn.lock
-└── README.md
 ```
