@@ -47,4 +47,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  // vuexを使用するモジュール同士の競合を避けるため
+  vuex: undefined,
 };
