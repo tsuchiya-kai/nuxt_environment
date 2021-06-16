@@ -23,7 +23,10 @@
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
+    "*.{css,vue}": "stylelint",
+    "*.{png,jpeg,jpg,gif,svg}": [
+      "imagemin-lint-staged"
+    ]
   },
   "husky": {
     "hooks": {
@@ -41,6 +44,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "cz-conventional-changelog-ja": "^0.0.2",
     "fibers": "^5.0.0",
+    "imagemin-lint-staged": "^0.4.0",
     "nuxt": "^2.15.7"
   },
   "devDependencies": {
