@@ -5,7 +5,7 @@ import Todo from '@/store/todos';
 
 let TodoStore: Todo;
 function initialiseStores(store: Store<any>): void {
-    TodoStore = getModule(Todo, store);
+  TodoStore = getModule(Todo, store);
 }
 
 export { initialiseStores, TodoStore };

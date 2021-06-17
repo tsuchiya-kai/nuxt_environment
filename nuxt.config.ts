@@ -1,4 +1,3 @@
-
 import { NuxtConfig } from '@nuxt/types';
 
 const isProd = process.env.BUILD_ENV === 'production';
@@ -28,7 +27,11 @@ const config: NuxtConfig = {
   css: ['@/assets/scss/app.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/axios', '~/plugins/axios-accessor', '~/plugins/mock-accessor.ts'],
+  plugins: [
+    '~/plugins/axios',
+    '~/plugins/axios-accessor',
+    '~/plugins/mock-accessor.ts',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -83,10 +86,10 @@ const config: NuxtConfig = {
   // vuex: undefined,
 
   /**
- * NOTE:
- * Nuxt.js 標準のプログレスバーを無効化
- * https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-loading
- */
+   * NOTE:
+   * Nuxt.js 標準のプログレスバーを無効化
+   * https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-loading
+   */
   loading: false,
 
   env: {
