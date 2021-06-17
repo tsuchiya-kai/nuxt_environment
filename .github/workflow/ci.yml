@@ -1,0 +1,45 @@
+name: Build and Test
+### PRのaction
+### Build, Test
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - main
+      - 'feature/**'
+      - 'fix/**'
+
+jobs:
+  ci:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [12.18.2]
+
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@master
+
+      - name: Setup node env 🏗
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Cache node_modules 📦
+        uses: actions/cache@v2
+        with:
+          # npm キャッシュファイルは Linux/macOS の「~/.npm」に保存される
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies 👨🏻‍💻
+        run: yarn install
+
+      - name: Run linter 👀
+        run: yarn lint
+
+      - name: Run generate 🍳
+        run: npm run generate
