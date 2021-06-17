@@ -13,31 +13,31 @@ export default class Todos extends VuexModule {
   private todos: Todo[] = [];
 
   // getter
-  public get getTodos() {
+  public get getTodos(): Todo[] {
     return this.todos;
   }
 
-  public get getTodo() {
+  public get getTodo(): (id: number) => Todo | undefined {
     return (id: number) => this.todos.find((todo) => todo.id === id);
   }
 
-  public get getTodoCount() {
+  public get getTodoCount(): number {
     return this.todos.length;
   }
 
   // mutation
   @Mutation
-  private set(todos: Todo[]) {
+  private set(todos: Todo[]): void {
     this.todos = todos;
   }
 
   @Mutation
-  private add(todo: Todo) {
+  private add(todo: Todo): void {
     this.todos.push(todo);
   }
 
   @Mutation
-  private update(id: number, newData: Todo) {
+  private update(id: number, newData: Todo): void {
     const todo = this.getTodo(id);
     if (todo) {
       todo.done = newData.done;
@@ -46,19 +46,19 @@ export default class Todos extends VuexModule {
   }
 
   @Mutation
-  private remove(id: number) {
+  private remove(id: number): void {
     this.todos = this.todos.filter((todo) => todo.id !== id);
   }
 
   // action
   @Action({ rawError: true })
-  public async fetchTodos() {
+  public async fetchTodos(): Promise<void> {
     const { data } = await $axios.get<Todo[]>('/todos/search');
     this.set(data);
   }
 
   @Action({ rawError: true })
-  public async createTodo(payload: string) {
+  public async createTodo(payload: string): Promise<void> {
     const { data } = await $axios.post<Todo>('/todos/create', {
       title: payload,
     });
@@ -66,13 +66,13 @@ export default class Todos extends VuexModule {
   }
 
   @Action({ rawError: true })
-  async updateTodo(id: number, todo: Todo) {
+  async updateTodo(id: number, todo: Todo): Promise<void> {
     const { data } = await $axios.post<Todo>(`/todos/update`, { id, todo });
     this.update(id, data);
   }
 
   @Action({ rawError: true })
-  async deleteTodo(id: number) {
+  async deleteTodo(id: number): Promise<void> {
     await $axios.delete(`/todos/delete/${id}`);
     this.remove(id);
   }

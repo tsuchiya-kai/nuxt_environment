@@ -1,6 +1,7 @@
 import { NuxtConfig } from '@nuxt/types';
 
-const isProd = process.env.BUILD_ENV === 'production';
+// TODO: 後で使う
+// const isProd = process.env.BUILD_ENV === 'production';
 
 const config: NuxtConfig = {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -47,10 +48,7 @@ const config: NuxtConfig = {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxtjs/axios',
-    ['vue-scrollto/nuxt', { offset: -140, ease: 'easeInOut', duration: 800 }],
-  ],
+  modules: ['@nuxtjs/axios'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -61,13 +59,7 @@ const config: NuxtConfig = {
   },
 
   router: {
-    middleware: [
-      'auth',
-      'reset-notification-bar',
-      'advertising-annotations',
-      'application-storage-manager',
-      'splash-canceller',
-    ],
+    middleware: [],
   },
 
   axios: {
